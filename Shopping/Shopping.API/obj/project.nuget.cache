@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "H5AwLsjROc4KcUoiFXaTOma3T+EY2VQxtRcG/TolAJbDNc3rgA5tZh/B103NvgPIc9fyG6PgceXwEX4L1HWBzA==",
+  "dgSpecHash": "B/HuOFzTQ3dLPczIK6y05vcdTXPWPyMb9wqydYNTzlbt+js3ftUCdfv/CWnzWmAZ0xOsj8j9pURZNimuaCy2+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\iheb hzami\\source\\repos\\azure_Devops\\Shopping\\Shopping.API\\Shopping.API.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\iheb hzami\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
     "C:\\Users\\iheb hzami\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\iheb hzami\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\iheb hzami\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
     "C:\\Users\\iheb hzami\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\iheb hzami\\.nuget\\packages\\mongodb.bson\\2.21.0\\mongodb.bson.2.21.0.nupkg.sha512",
     "C:\\Users\\iheb hzami\\.nuget\\packages\\mongodb.driver\\2.21.0\\mongodb.driver.2.21.0.nupkg.sha512",

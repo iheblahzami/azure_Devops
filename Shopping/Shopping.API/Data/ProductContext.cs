@@ -81,6 +81,14 @@ namespace Shopping.API.Data
                     ImageFile = "product-6.png",
                     Price = 240.00M,
                     Category = "Home Kitchen"
+                },
+                   new Product()
+                {
+                    Name = "nokia 111",
+                    Description = "This phone  includes a borderless.",
+                    ImageFile = "product-33.png",
+                    Price =50.00M,
+                    Category = " not Smart Phone"
                 }
             };
         }

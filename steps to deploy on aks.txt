@@ -1,0 +1,177 @@
+docker login 
+docker build -t web-app:lts .
+ docker run -d -p 8080:80 --name myapp shoppingclient
+docker tag + esm l'image (or ID ) + registry/repository (iheb49/shoppingapp)
+
+docker push image name + tag
+
+docker pull imagename
+
+docker run -d -p 27017:27017 --name shopping-mongo mongo
+
+bch te3rf kubernetes cluster ly te5dem fyh 
+kubectl config get-contexts
+
+kubectl config current-context 
+kubectl config use-context
+
+
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+
+docker ps 
+
+docker images
+
+docker-compose -f docker-compose.yml -f docker-compose.override.yml down
+
+
+install azure cli 
+https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
+
+az --version
+
+az login 
+
+ az group create --name myResourceGroup --location westeurope
+az acr create --resource-group myResourceGroup --name shoppingacrfortest --sku Basic --admin-enabled true
+
+az acr update -n shoppingacrfortest --admin-enabled true
+
+az acr login --name shoppingacrfortest 
+////az acr delete --name shoppingacrfortest --resource-group myResourceGroup  --yes
+
+get the login server address
+az acr list --resource-group myResourceGroup --query "[].{acrLoginServer:loginServer}" --output table
+
+
+docker tag shoppingapi:latest shoppingacrfortest.azurecr.io/shoppingapi:v1
+
+docker tag shoppingclient:latest shoppingacrfortest.azurecr.io/shoppingclient:v1
+
+docker push shoppingacrfortest.azurecr.io/shoppingapi:v1
+docker push shoppingacrfortest.azurecr.io/shoppingclient:v1
+
+
+
+
+
+az acr repository list --name shoppingacrfortest --output table
+List images in registry
+az acr repository list --name shoppingacrfortest --output table
+
+Result
+shoppingapi
+shoppingclient
+--
+See tags
+az acr repository show-tags --name shoppingacrfortest --repository shoppingclient --output table
+
+
+
+Create AKS cluster with attaching ACR
+az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 1 --generate-ssh-keys --attach-acr shoppingacrfortest
+
+
+
+
+
+az aks install-cli
+
+
+
+
+
+
+Connect to cluster using kubectl
+az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+
+
+kubectl create secret docker-registry acr-secret --docker-server=shoppingacrfortest.azurecr.io --docker-username=shoppingacrfortest --docker-password=C5r4RtGfNXw4tzLViZzp37i9F90bpnlh+9RAQX7weZ+ACRARdAuY --docker-email=mohamediheb.lahzami@esprit-tn.com
+
+
+kubectl get secret
+
+
+
+
+kubectl apply -f mongo-secret.yaml
+kubectl get secret
+
+
+kubectl scale --replicas=3 +esm depolyment.yml
+
+
+
+
+kubectl get pods --watch 
+
+watch bech tnadhhom 7asb l wa9t creation par oredre 
+
+
+
+
+kubectl get pods (esm l pod ) -o wide
+
+NAME                                READY   STATUS    RESTARTS       AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+mongo-deployment-68d5bf5d8f-dmtpt   1/1     Running   2 (5m7s ago)   5m48s   10.1.0.46   docker-desktop   <none>           <none>
+
+
+
+
+
+
+
+
+kubectl config get-contexts
+kubectl config current-context
+
+
+
+
+
+
+kubectl scale --replicat=3 shoppingclient-deployment
+
+pour observer  autoscaling 
+kubectl get hpa 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+az group delete --name myResourceGroup --yes --no-wait
+
+
+
+kubectl delete -f /aks/
+
+
